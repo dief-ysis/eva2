@@ -1,6 +1,7 @@
+package ventas.usuario.services;
 
-import com.example.usuario.model.Usuario;
-import com.example.usuario.repository.UsuarioRepository;
+import ventas.usuario.model.Usuario;
+import ventas.usuario.repository.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

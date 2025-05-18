@@ -1,4 +1,4 @@
-package main.java.ventas.usuario.model;
+package ventas.usuario.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -34,6 +34,4 @@ public class Usuario {
 
     @Size(max = 20, message = "El teléfono no puede tener más de 20 caracteres")
     private String telefono;
-
-    // Puedes añadir más campos según los requisitos de la Evaluación Parcial N°1
 }

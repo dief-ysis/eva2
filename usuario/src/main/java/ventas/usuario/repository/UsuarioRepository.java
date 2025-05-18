@@ -1,6 +1,6 @@
-package main.java.ventas.usuario.repository;
+package ventas.usuario.repository;
 
-import com.example.usuario.model.Usuario;
+import ventas.usuario.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

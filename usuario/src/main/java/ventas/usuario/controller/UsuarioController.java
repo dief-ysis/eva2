@@ -1,7 +1,7 @@
-package main.java.ventas.usuario.controller;
+package ventas.usuario.controller;
 
-import com.example.usuario.model.Usuario;
-import com.example.usuario.service.UsuarioService;
+import ventas.usuario.model.Usuario;
+import ventas.usuario.services.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,7 +34,7 @@ public class UsuarioController {
     public ResponseEntity<Usuario> getUsuarioById(@PathVariable Long id) {
         Usuario usuario = usuarioService.getUsuarioById(id);
         return ResponseEntity.ok(usuario);
-    }
+}
 
     @PostMapping
     public ResponseEntity<Usuario> createUsuario(@Valid @RequestBody Usuario usuario) {
