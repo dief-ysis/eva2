@@ -1,7 +1,8 @@
-package com.ejemplo.carrito.controller;
+package ventas.carrito.controller;
 
-import com.ejemplo.carrito.model.Carrito;
-import com.ejemplo.carrito.service.CarritoService;
+import ventas.carrito.model.Carrito;
+import ventas.carrito.services.CarritoService;
+import ventas.carrito.controller.CarritoController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

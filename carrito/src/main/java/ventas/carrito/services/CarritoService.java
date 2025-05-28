@@ -1,7 +1,7 @@
-package com.ejemplo.carrito.service;
+package ventas.carrito.services;
 
-import com.ejemplo.carrito.model.Carrito;
-import com.ejemplo.carrito.repository.CarritoRepository;
+import ventas.carrito.model.Carrito;
+import ventas.carrito.repository.CarritoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,3 +27,4 @@ public class CarritoService {
         carritoRepository.deleteById(id);
     }
 }
+
