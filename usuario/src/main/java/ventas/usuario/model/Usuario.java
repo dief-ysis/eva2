@@ -1,37 +1,37 @@
 package ventas.usuario.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "usuarios")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor 
 public class Usuario {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Generación de ID automática, compatible con BIGSERIAL de PostgreSQL
     private Long id;
 
-    @NotBlank(message = "El nombre es obligatorio")
-    @Size(max = 100, message = "El nombre no puede tener más de 100 caracteres")
+    @Column(name = "nombre", nullable = false) // Columna 'nombre', no puede ser nula
     private String nombre;
 
-    @NotBlank(message = "El apellido es obligatorio")
-    @Size(max = 100, message = "El apellido no puede tener más de 100 caracteres")
-    private String apellido;
-
-    @Email(message = "El email debe ser válido")
-    @NotBlank(message = "El email es obligatorio")
-    @Size(max = 255, message = "El email no puede tener más de 255 caracteres")
-    @Column(unique = true)
+    @Column(name = "email", nullable = false, unique = true) // Columna 'email', no puede ser nula y debe ser única
     private String email;
 
-    @NotBlank(message = "La contraseña es obligatoria")
-    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
-    private String password;
+    @Column(name = "contrasena", nullable = false) // Columna 'contrasena', no puede ser nula
+    private String contrasena;
 
-    @Size(max = 20, message = "El teléfono no puede tener más de 20 caracteres")
-    private String telefono;
+    @Column(name = "rol", length = 50, columnDefinition = "VARCHAR(50) DEFAULT 'CLIENTE'") // Columna 'rol' con valor por defecto
+    private String rol;
+
+    @CreationTimestamp // Anotación de Hibernate para establecer la fecha de creación automáticamente
+    @Column(name = "fecha_registro", nullable = false, updatable = false) // Columna 'fecha_registro', no puede ser nula y no se actualiza
+    private LocalDateTime fechaRegistro;
 }

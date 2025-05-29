@@ -15,6 +15,27 @@
             "mainClass": "ventas.usuario.UsuarioApplication",
             "projectName": "usuario",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=52240 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=usuario"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-InventarioApplication<inventario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ventas.inventario.InventarioApplication",
+            "projectName": "inventario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductoApplication<inventario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ventas.Producto.ProductoApplication",
+            "projectName": "inventario",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]
