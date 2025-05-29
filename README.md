@@ -1,5 +1,4 @@
-Microservicios - Gestión de Usuarios, Inventario y Carrito
-Este proyecto implementa una arquitectura basada en microservicios utilizando Spring Boot. Se desarrollaron tres microservicios independientes para gestionar usuarios, productos en inventario y carritos de compra.
+
 Estructura del Repositorio
 ├── usuario/
 ├── inventario/
